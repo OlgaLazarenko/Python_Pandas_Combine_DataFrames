@@ -23,6 +23,45 @@ auto_df3 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Imported_Autos
 print(auto_df3)
 print()
 
+print('auto_df4')
 auto_df4 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Imported_Autos\Auto_DataSet_4.csv")
 print(auto_df4)
 print()
+
+print('auto_df5')
+auto_df5 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Imported_Autos\Auto_DataSet_5.csv")
+print(auto_df5)
+print()
+
+
+
+print('---------------------------------------------------------------------------------')
+
+# read Pennsylvania Briges datasets
+print('brige_df1')
+brige_df1 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Pennsylvania_Briges\Briges_1.csv")
+print(brige_df1)
+print()
+
+print('brige_df2')
+brige_df2 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Pennsylvania_Briges\Briges_2.csv")
+print(brige_df2)
+print()
+
+print('brige_df3')
+brige_df3 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Pennsylvania_Briges\Briges_3.csv")
+print(brige_df3)
+print()
+
+print('brige_df4')
+brige_df4 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Pennsylvania_Briges\Briges_4.csv")
+print(brige_df4)
+print()
+
+print('brige_df5')
+brige_df5 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Pennsylvania_Briges\Briges_5.csv")
+print(brige_df5)
+print()
+
+
+print('-------------------------------------------------------------------------------------')
