@@ -65,3 +65,10 @@ print()
 
 
 print('-------------------------------------------------------------------------------------')
+
+# *** Concatenating DataFrames
+print('Concatenating DataFrames')
+auto_frames = [auto_df1 , auto_df2 , auto_df3]
+auto_result = pd.concat(auto_frames)
+print('auto_result')
+print(auto_result)
