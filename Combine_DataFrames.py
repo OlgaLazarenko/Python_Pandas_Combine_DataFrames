@@ -46,8 +46,22 @@ print()
 
 # create a new column at the dataframe auto_df
 auto_df['CarID'] = range(1,len(auto_df) + 1,1)
-print(auto_df)
+print()
+print('auto_df with new column CarID')
+print(auto_df.head())
+print()
 
+
+# move the new column at auto_df to the first position
+# first: remove the new column by unsing the function pop() and save this column in a variable
+column_name = "CarID"
+first_column = auto_df.pop(column_name)
+print(auto_df.head())
+print()
+# use the function insert() to insert the columns saved in the variable <first_column>
+auto_df.insert(0,"CarID",first_column)
+print('auto_df with CarID at the first position')
+print(auto_df)
 
 
 
