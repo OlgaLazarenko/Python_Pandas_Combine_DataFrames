@@ -33,6 +33,17 @@ auto_df5 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Imported_Autos
 print(auto_df5)
 print()
 
+print('auto_df')
+auto_df = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv" , 
+                                 usecols = [
+                                    'Make' ,
+                                    'Body Style' , 
+                                    'City mpg' ,
+                                    'Highway mpg',  
+                                    'Normalized Loss' ,
+                                    'Price'])
+print(auto_df.head())
+
 
 
 print('---------------------------------------------------------------------------------')
@@ -68,7 +79,6 @@ print('-------------------------------------------------------------------------
 
 # *** Concatenating DataFrames
 print('Concatenating DataFrames')
-auto_frames = [auto_df1 , auto_df2 , auto_df3]
-auto_result = pd.concat(auto_frames)
+auto_result = pd.concat([auto_df1 , auto_df2 , auto_df3])
 print('auto_result')
 print(auto_result)
