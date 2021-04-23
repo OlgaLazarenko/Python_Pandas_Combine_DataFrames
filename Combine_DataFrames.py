@@ -40,9 +40,14 @@ auto_df = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Se
                                     'Body Style' , 
                                     'City mpg' ,
                                     'Highway mpg',  
-                                    'Normalized Loss' ,
                                     'Price'])
 print(auto_df.head())
+print()
+
+# create a new column at the dataframe auto_df
+auto_df['CarID'] = range(1,len(auto_df) + 1,1)
+print(auto_df)
+
 
 
 
