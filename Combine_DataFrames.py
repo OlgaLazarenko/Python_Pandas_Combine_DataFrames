@@ -59,14 +59,49 @@ first_column = auto_df.pop(column_name)
 print(auto_df.head())
 print()
 # use the function insert() to insert the columns saved in the variable <first_column>
-auto_df.insert(0,"CarID",first_column)
+auto_df.insert(0,"CarID",first_column) 
 print('auto_df with CarID at the first position')
 print(auto_df)
+
+# create subsets of the dataframe <auto_df>
+auto1 = auto_df.iloc[:10]
+print('auto1')
+print(auto1)
+print()
+
+auto2 = auto_df.iloc[109:130]
+print('auto2')
+print(auto2)
+print()
+
+auto3 = auto_df.iloc[199:]
+print('auto3')
+print(auto3)
+print()
+
+
+auto11 = auto_df.iloc[7:21]
+print('auto11')
+print(auto11)
+print()
+
+
+
+# combine/concatenate the dataframes auto1,auto2,auto3
+auto123 = pd.concat([auto1,auto2,auto3])
+print('auto123')
+print(auto123)
+print()
+
+
+
+
+
 
 
 
 print('---------------------------------------------------------------------------------')
-
+'''
 # read Pennsylvania Briges datasets
 print('brige_df1')
 brige_df1 = pd.read_csv("E:\_Python_Projects_Data\Combine_DataSets\Pennsylvania_Briges\Briges_1.csv")
@@ -101,3 +136,4 @@ print('Concatenating DataFrames')
 auto_result = pd.concat([auto_df1 , auto_df2 , auto_df3])
 print('auto_result')
 print(auto_result)
+'''
