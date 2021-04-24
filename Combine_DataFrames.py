@@ -90,21 +90,34 @@ auto3 = auto_df.iloc[199:]
 print('auto3')
 print(auto3)
 print()
+print()
 
 
 
 
 
-
+# ----------------------------------------------------------------
 # combine/concatenate the dataframes auto1,auto2,auto3
 print('combine/concatenate the dataframes auto1,auto2,auto3')
-auto123 = pd.concat([auto1,auto2,auto3])
+auto123 = pd.concat([auto1 , auto2 , auto3])
 print('auto123')
 print(auto123)
 print()
 
+print('associate specific keys with each of the combined dataframes')
+auto123_keys = pd.concat([auto1 , auto2 , auto3] , keys =['auto1' , 'auto2' , 'auto3'])
+print('auto123_keys')
+print(auto123_keys)
+print()
+# ----------------------------------------------------------------
+
+
+
 # combine/concatenate the dataframes auto1, auto11, auto12
 print('combine/concatenate the dataframes auto1, auto11, auto12')
+auto1s = pd.concat([auto1 , auto11 , auto12])
+print("auto1s")
+print(auto1s)
 
 
 
