@@ -103,6 +103,10 @@ print('auto123')
 print(auto123)
 print()
 
+# combine/concatenate the dataframes auto1, auto11, auto12
+print('combine/concatenate the dataframes auto1, auto11, auto12')
+
+
 
 
 
