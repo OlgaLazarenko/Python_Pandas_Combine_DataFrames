@@ -69,6 +69,18 @@ print('auto1')
 print(auto1)
 print()
 
+auto11 = auto_df.iloc[4:16]
+print('auto11')
+print(auto11)
+print()
+
+auto12 = auto_df.iloc[12:21]
+print('auto12')
+print(auto12)
+print()
+print('--------------------------------------')
+
+print()
 auto2 = auto_df.iloc[109:130]
 print('auto2')
 print(auto2)
@@ -80,14 +92,12 @@ print(auto3)
 print()
 
 
-auto11 = auto_df.iloc[7:21]
-print('auto11')
-print(auto11)
-print()
+
 
 
 
 # combine/concatenate the dataframes auto1,auto2,auto3
+print('combine/concatenate the dataframes auto1,auto2,auto3')
 auto123 = pd.concat([auto1,auto2,auto3])
 print('auto123')
 print(auto123)
