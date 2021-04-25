@@ -123,7 +123,13 @@ print('associate specific keys with each of the combined dataframes')
 auto1s_keys = pd.concat([auto1 , auto11 , auto12] , keys = ['df_1' , 'df_11' , 'df_12'])
 print('auto1s_keys')
 print(auto1s_keys)
+print()
+print()
 
+# remane the columns 
+print('rename the columns')
+auto11 = auto11.rename(columns = {"Make":"Manufacturer" , "City mpg":"Miliage City" , "Highway":"Mileage Highway"})
+print(auto11)
 
 
 
