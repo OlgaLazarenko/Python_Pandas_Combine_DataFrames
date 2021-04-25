@@ -128,8 +128,15 @@ print()
 
 # remane the columns 
 print('rename the columns')
-auto11 = auto11.rename(columns = {"Make":"Manufacturer" , "City mpg":"Miliage City" , "Highway":"Mileage Highway"})
-print(auto11)
+print('auto3_col')
+auto3_col = auto3.rename(columns = {"Make":"Manufacturer" , "City mpg":"Miliage City" , "Highway":"Mileage Highway"})
+print(auto3_col)
+print()
+
+# concatenate two dataframes(auto1 and auto3_col) with different columns names
+print("combine two dataframes(auto1 and auto11) with different columns names")
+auto_dif_col = pd.concat([auto1 , auto3_col])
+print(auto_dif_col)
 
 
 
