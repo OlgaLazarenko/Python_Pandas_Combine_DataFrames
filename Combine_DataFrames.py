@@ -144,7 +144,18 @@ print()
 # concatenate with axis=0
 print('concatenate two dataframes(auto1, auto2) when  axis = 0')
 auto_ax0 = pd.concat([auto1,auto2], axis=0) 
+print('auto_ax0 dataframe, the result of concatenating with axis=0')
 print(auto_ax0)
+print()
+print()
+
+# concatenate with axis=1
+print('concatenate two dataframes(auto1, auto2) when  axis = 1')
+auto_ax1 = pd.concat([auto1,auto2] , axis=1)
+print('auto_ax1 dataframe, the result of concatenating with axis=1')
+print(auto_ax1)
+print()
+print()
 
 
 
