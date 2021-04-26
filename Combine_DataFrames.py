@@ -157,6 +157,11 @@ print(auto_ax1)
 print()
 print()
 
+# reset the indexes of the concatenated <auto123> dataframe
+print('Reset the indexes of the concatenated <auto123> dataframe')
+auto123.reset_index(drop = True, inplace = True)
+print(auto123)
+
 
 
 
