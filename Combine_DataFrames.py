@@ -161,7 +161,29 @@ print()
 print('Reset the indexes of the concatenated <auto123> dataframe')
 auto123.reset_index(drop = True, inplace = True)
 print(auto123)
+print()
+print()
 
+print('------------------------------------------------------------------------------')
+auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv" , 
+                  usecols = ['Make' ,
+                              'Body Style' , 
+                              'City mpg' ,
+                              'Highway mpg',  
+                              'Price'])
+print('<auto> DataFrame')
+print(auto)
+
+# insert a new column <CarID> at the DataFrame <auto>
+print()
+column_name = "CarID"
+first_column = auto_df.pop(column_name)
+print(auto.head())
+print()
+# use the function insert() to insert the columns saved in the variable <first_column>
+auto.insert(0,"CarID",first_column) 
+print('auto with CarID at the first position')
+print(auto)
 
 
 
