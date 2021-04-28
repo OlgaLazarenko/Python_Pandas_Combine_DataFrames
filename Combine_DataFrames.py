@@ -184,6 +184,11 @@ print()
 auto.insert(0,"CarID",first_column) 
 print('auto with CarID at the first position')
 print(auto)
+print()
+
+# remove some columns from <auto> DataFrame
+del auto['Price']
+print(auto)
 
 
 
