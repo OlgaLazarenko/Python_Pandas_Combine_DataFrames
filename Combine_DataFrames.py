@@ -191,7 +191,7 @@ del auto['Price'] # delete the column 'Price'
 print(auto)
 
 auto.pop('Body Style') # remove/pop the column 'Body Style' from the DataFrame <auto>
-auto.drop('City mpg'  , inplace = True , axis = 1 )
+auto.drop(['City mpg', 'Highway mpg'] , inplace = True , axis = 1 )
 print('*****')
 print(auto)
 
