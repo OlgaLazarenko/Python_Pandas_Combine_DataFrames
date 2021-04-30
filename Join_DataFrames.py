@@ -14,6 +14,7 @@ auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\A
                               'Price'])
 print('<auto> DataFrame')
 print(auto.head())
+print()
 
 # insert a new column <CarID> at the DataFrame <auto> at the first position
 # generate a list of number of a specific range(for CarID column)
@@ -21,9 +22,13 @@ def create_CarID_list(firstID , lastID):
     return list(range(firstID , lastID))
 
 # call the function 
-create_CarID_list(1,len(auto))
-print(create_CarID_list(1,len(auto)))
-#auto.insert(0,'CarID')
+N1 = 10001
+N2 = (len(auto)+1)+10000
+create_CarID_list(N1,N2)
+print(create_CarID_list(N1,N2))
+
+CarID_list = create_CarID_list(N1,N2)
+
 
 print()
 '''
