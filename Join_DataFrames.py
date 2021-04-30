@@ -16,7 +16,7 @@ print('<auto> DataFrame')
 print(auto.head())
 print()
 
-# insert a new column <CarID> at the DataFrame <auto> at the first position
+
 # generate a list of number of a specific range(for CarID column)
 def create_CarID_list(firstID , lastID):
     return list(range(firstID , lastID))
@@ -31,8 +31,15 @@ print(create_CarID_list(N1,N2))
 print()
 
 CarID_list = create_CarID_list(N1,N2) # these values will be instered as 'CarID' values into the auto DataFrame
+# insert a new column <CarID> at the DataFrame <auto> at the first position
 auto.insert( 0 , "CarID" , CarID_list)
 print(auto)
+print()
+
+# create <price_df> DataFrame from the columns <CarID>,<Price> of <auto> DataFrame
+print('<price> DataFrame')
+price_df = auto[['CarID' , 'Price']].copy()
+print(price_df)
 
 
 print()
