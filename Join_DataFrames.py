@@ -21,13 +21,18 @@ print()
 def create_CarID_list(firstID , lastID):
     return list(range(firstID , lastID))
 
-# call the function 
+
 N1 = 10001
 N2 = (len(auto)+1)+10000
-create_CarID_list(N1,N2)
+create_CarID_list(N1,N2) # call the function 
+print()
+print('The values for the column CarID:')
 print(create_CarID_list(N1,N2))
+print()
 
-CarID_list = create_CarID_list(N1,N2)
+CarID_list = create_CarID_list(N1,N2) # these values will be instered as 'CarID' values into the auto DataFrame
+auto.insert( 0 , "CarID" , CarID_list)
+print(auto)
 
 
 print()
