@@ -31,9 +31,14 @@ print()
 del auto['Price'] # delete the column 'Price'
 auto.pop('Body Style') # remove/pop the column 'Body Style' from the DataFrame <auto>
 auto.drop(['City mpg', 'Highway mpg'] , inplace = True , axis = 1 )
+print('<auto> DataFrame')
+print(auto.head())
 
 # print create <country> DataFrame by reading the data file
 country = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Country.csv")
+print('<country> DataFrame')
+# have the values at the column 'Car Model' at lowercase
+country['Car Model'] = country['Car Model'].str.lower()
 print('<country> DataFrame')
 print(country)
 print()
