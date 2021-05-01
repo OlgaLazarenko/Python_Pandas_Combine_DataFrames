@@ -42,6 +42,16 @@ price_df = auto[['CarID' , 'Price']].copy()
 print(price_df)
 
 
+# remove <Price> column from <auto> DataFrame
+auto.pop('Price')
+print(auto)
+
+# now the DataFrames <auto> and <price_df> have the common column <CarID>
+# join/merge these two DataFrames on the column <CarID>
+result_df = pd.merge(auto , price_df , how = 'left' ,on = 'CarID')
+print(result_df)
+print(result_df.shape)
+
 print()
 '''
 column_name = 'CarID'
@@ -54,7 +64,7 @@ print('auto with CarID at the first position')
 print(auto)
 print()
 '''
-
+'''
 # remove some columns from <auto> DataFrame
 del auto['Price'] # delete the column 'Price'
 auto.pop('Body Style') # remove/pop the column 'Body Style' from the DataFrame <auto>
@@ -70,3 +80,4 @@ country['Car Model'] = country['Car Model'].str.lower()
 print('<country> DataFrame')
 print(country)
 print()
+'''
