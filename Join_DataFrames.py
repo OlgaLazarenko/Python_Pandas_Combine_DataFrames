@@ -36,7 +36,7 @@ auto.insert( 0 , "CarID" , CarID_list)
 print(auto)
 print()
 
-# create <price_df> DataFrame from the columns <CarID>,<Price> of <auto> DataFrame
+# *******   create <price_df> DataFrame from the columns <CarID>,<Price> of <auto> DataFrame
 print('<price> DataFrame')
 price_df = auto[['CarID' , 'Price']].copy()
 print(price_df)
@@ -51,8 +51,20 @@ print(auto)
 result_df = pd.merge(auto , price_df , how = 'left' ,on = 'CarID')
 print(result_df)
 print(result_df.shape)
-
 print()
+
+# ******* read the file <country> and create the dataframe <make_country>
+country = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Country.csv")
+# have the values at the column 'Car Model' at lowercase
+country['Car Model'] = country['Car Model'].str.lower()
+print('<country> DataFrame')
+print(country)
+print()
+
+
+
+
+
 '''
 column_name = 'CarID'
 first_column = auto.pop(column_name)
@@ -73,11 +85,5 @@ print('<auto> DataFrame')
 print(auto.head())
 
 # print create <country> DataFrame by reading the data file
-country = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Country.csv")
-print('<country> DataFrame')
-# have the values at the column 'Car Model' at lowercase
-country['Car Model'] = country['Car Model'].str.lower()
-print('<country> DataFrame')
-print(country)
-print()
+
 '''
