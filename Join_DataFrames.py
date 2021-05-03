@@ -91,6 +91,17 @@ continent = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_
 print()
 print('<continent> DataFrame')
 print(continent)
+print()
+
+# merhe/join the dataframes <auto_country> and <continent>
+auto_country_continent = pd.merge( auto_country , continent , how = 'left' , on = 'Country')
+print('<auto_country_continent> DataFrame')
+print(auto)
+
+# place the column 'Continent' after the column 'Country'
+continent_column = auto_country_continent.pop('Continent')
+auto_country_continent.insert( 3 , 'Continent' , continent_column)
+print(auto_country_continent.head())
 
 
 '''
