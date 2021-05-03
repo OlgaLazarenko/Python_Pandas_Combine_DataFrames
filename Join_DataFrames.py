@@ -48,9 +48,9 @@ print(auto)
 
 # now the DataFrames <auto> and <price_df> have the common column <CarID>
 # join/merge these two DataFrames on the column <CarID>
-result_df = pd.merge(auto , price_df , how = 'left' ,on = 'CarID')
-print(result_df)
-print(result_df.shape)
+auto_df = pd.merge(auto , price_df , how = 'left' ,on = 'CarID')
+print(auto_df)
+print(auto_df.shape)
 print()
 
 # ******* read the file <country> and create the dataframe <make_country>
@@ -71,7 +71,7 @@ print()
 
 
 # merge/join the DataFrames <auto> and <country> on the key column <Car Make>
-auto_country = pd.merge(auto , country , how = 'left' , on  = 'Make')
+auto_country = pd.merge(auto_df , country , how = 'left' , on  = 'Make')
 print('<auto_country> DataFrame')
 print(auto_country)
 
