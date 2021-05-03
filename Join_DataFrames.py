@@ -61,6 +61,18 @@ print('<country> DataFrame')
 print(country)
 print()
 
+# rename the column "Car Model" into "Make"
+country.rename(columns ={'Car Model':'Make'} , inplace = True )
+print(country)
+print('****')
+
+
+'''
+# merge/join the DataFrames <auto> and <country> on the key column <Car Make>
+auto_country = pd.merge(auto , country , how = 'left' , on  = 'Make')
+print('<auto_country> DataFrame')
+print(auto_country)
+'''
 
 
 
