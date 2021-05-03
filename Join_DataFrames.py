@@ -65,14 +65,25 @@ print()
 country.rename(columns ={'Car Model':'Make'} , inplace = True )
 print(country)
 print('****')
+print()
 
 
-'''
+
+
 # merge/join the DataFrames <auto> and <country> on the key column <Car Make>
 auto_country = pd.merge(auto , country , how = 'left' , on  = 'Make')
 print('<auto_country> DataFrame')
 print(auto_country)
-'''
+
+
+
+# place the column <Country> after the column <Make> at the auto_country DataFrame
+country_column = auto_country.pop('Country')
+# insert the column to the third position
+auto_country.insert( 2 , 'Country' , country_column)
+print()
+print(auto_country.head())
+
 
 
 
