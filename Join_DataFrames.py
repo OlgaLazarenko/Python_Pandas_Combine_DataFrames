@@ -83,9 +83,14 @@ country_column = auto_country.pop('Country')
 auto_country.insert( 2 , 'Country' , country_column)
 print()
 print(auto_country.head())
+print()
+print()
 
-
-
+# read the file 'Continent.csv' into the dataframe <continent>
+continent = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Continent.csv")
+print()
+print('<continent> DataFrame')
+print(continent)
 
 
 '''
