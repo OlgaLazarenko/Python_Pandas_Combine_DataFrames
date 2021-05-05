@@ -68,13 +68,12 @@ print('****')
 print()
 
 
-
-
+# ---  LEFT JOIN  ---
+print(' ---  LEFT JOIN  ---')
 # merge/join the DataFrames <auto> and <country> on the key column <Car Make>
 auto_country = pd.merge(auto_df , country , how = 'left' , on  = 'Make')
 print('<auto_country> DataFrame')
 print(auto_country)
-
 
 
 # place the column <Country> after the column <Make> at the auto_country DataFrame
@@ -102,27 +101,13 @@ print(auto)
 continent_column = auto_country_continent.pop('Continent')
 auto_country_continent.insert( 3 , 'Continent' , continent_column)
 print(auto_country_continent.head())
-
-
-'''
-column_name = 'CarID'
-first_column = auto.pop(column_name)
-print(auto.head())
 print()
-# use the function insert() to insert the columns saved in the variable <first_column>
-auto.insert(0,"CarID",first_column) 
-print('auto with CarID at the first position')
-print(auto)
+print('-----------------------------------')
 print()
-'''
-'''
-# remove some columns from <auto> DataFrame
-del auto['Price'] # delete the column 'Price'
-auto.pop('Body Style') # remove/pop the column 'Body Style' from the DataFrame <auto>
-auto.drop(['City mpg', 'Highway mpg'] , inplace = True , axis = 1 )
-print('<auto> DataFrame')
-print(auto.head())
+print()
 
-# print create <country> DataFrame by reading the data file
-
-'''
+# --- INNER JOIN ---
+# sort the dataframe <price> the acsending order by the column 'Price'
+price_df.dropna()
+price_df.sort_values( by = ['Price'] , ascending = False , inplace = True )
+print(price_df.head(10))
