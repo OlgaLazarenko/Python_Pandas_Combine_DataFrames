@@ -128,16 +128,18 @@ print('*******')
 
 # create <price_10_top> DataFrame
 price_10_top = price_df.head(10)
-
 print('<price_10_top> DataFrame ')
 print(price_10_top)
 print()
 print('lenght of <price_10_top> DataFrame : ' + str(len(price_10_top)) )
-'''
+
 # inner join of the dataframes <auto> and <price_10_top> on the kay column 'CarID'
 auto_10_top_price = pd.merge( price_10_top , auto , how = 'inner' , on = 'CarID')
 print()
 print('auto_10_top_price')
 print(auto_10_top_price)
 print()
-'''
+
+# and one more inner join
+auto_10_top = pd.merge( auto_10_top_price , country , how = 'left' , on  = 'Make')
+print(auto_10_top)
