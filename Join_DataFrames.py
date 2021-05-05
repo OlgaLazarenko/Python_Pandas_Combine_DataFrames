@@ -107,7 +107,9 @@ print()
 print()
 
 # --- INNER JOIN ---
+# drop non numeric values from <price_df> DataFrame
+price_df = price_df[pd.to_numeric(price_df['Price'] , errors = 'coerce').  notna()]
 # sort the dataframe <price> the acsending order by the column 'Price'
-price_df.dropna()
+
 price_df.sort_values( by = ['Price'] , ascending = False , inplace = True )
 print(price_df.head(10))
