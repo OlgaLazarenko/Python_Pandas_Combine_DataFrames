@@ -109,7 +109,19 @@ print()
 # --- INNER JOIN ---
 # drop non numeric values from <price_df> DataFrame
 price_df = price_df[pd.to_numeric(price_df['Price'] , errors = 'coerce').  notna()]
-# sort the dataframe <price> the acsending order by the column 'Price'
 
-price_df.sort_values( by = ['Price'] , ascending = False , inplace = True )
-print(price_df.head(10))
+# sort the dataframe <price> the acsending order by the column 'Price'
+price_df.sort_values( by = ['Price'] , ascending = False , inplace = False )
+price_sorted = price_df
+
+print('price_sorted DataFrame')
+print(price_sorted.head(10))
+print()
+
+# create <price_10_top> DataFrame
+price_10_top = price_sorted.loc[:10]
+
+print('<price_10_top> DataFrame ')
+print(price_10_top)
+print()
+print('lenght of <price_10_top> DataFrame : ' + str(len(price_10_top)) )
