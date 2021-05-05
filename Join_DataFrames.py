@@ -110,25 +110,34 @@ print()
 # drop non numeric values from <price_df> DataFrame
 price_df = price_df[pd.to_numeric(price_df['Price'] , errors = 'coerce').  notna()]
 
-# sort the dataframe <price> the acsending order by the column 'Price'
-price_df.sort_values( by = ['Price'] , ascending = False , inplace = False )
-price_sorted = price_df
+print()
+print(price_df.dtypes) # the column "Price" is object data type, but it should be the numeric/integer data type
 
-print('price_sorted DataFrame')
-print(price_sorted.head(10))
+price_df['Price'] = pd.to_numeric(price_df['Price'])
+print(price_df.dtypes)
+print()
 print()
 
+# sort the dataframe <price> the descending order by the column 'Price'
+price_df.sort_values( by = ['Price']  , inplace = True , ascending = False)
+print('sorted <price_df>')
+print(price_df.head(10))
+print('*******')
+
+
+
 # create <price_10_top> DataFrame
-price_10_top = price_sorted.loc[:10]
+price_10_top = price_df.head(10)
 
 print('<price_10_top> DataFrame ')
 print(price_10_top)
 print()
 print('lenght of <price_10_top> DataFrame : ' + str(len(price_10_top)) )
-
+'''
 # inner join of the dataframes <auto> and <price_10_top> on the kay column 'CarID'
-auto_10_top_price = pd.merge( price_10_top , auto_country , how = 'inner' , on = 'CarID')
+auto_10_top_price = pd.merge( price_10_top , auto , how = 'inner' , on = 'CarID')
 print()
 print('auto_10_top_price')
 print(auto_10_top_price)
 print()
+'''
