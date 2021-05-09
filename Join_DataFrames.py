@@ -143,3 +143,8 @@ print()
 # and one more inner join
 auto_10_top = pd.merge( auto_10_top_price , country , how = 'left' , on  = 'Make')
 print(auto_10_top)
+
+# create the dataframe with 20 rows
+auto_20 = auto.head(20)
+print('auto_20')
+print(auto_20)
