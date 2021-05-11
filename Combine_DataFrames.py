@@ -184,6 +184,15 @@ print('auto_volvo')
 print(auto_volvo)
 print()
 
+# combine the newly created subsets <auto_bmw> , <auto_audi> , <auto_volvo>
+list_subsets = [auto_bmw , auto_audi , auto_volvo]
+auto_bmw_audi_volvo = pd.concat(list_subsets)
+print('auto_bmw_audi_volvo ')
+print(auto_bmw_audi_volvo )
+print()
+
+
+
 '''
 # show the columns name
 for col in auto.columns:
