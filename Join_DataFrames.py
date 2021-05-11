@@ -150,5 +150,5 @@ print('auto_20')
 print(auto_20)
 
 # inner join
-auto_10_20_inner_join = pd.merge(auto_10 , auto_20 , how = 'inner' , on = 'CarID')
+auto_10_20_inner_join = pd.merge(auto_10_top , auto_20 , how = 'inner' , on = 'CarID')
 print(auto_10_20_inner_join)
