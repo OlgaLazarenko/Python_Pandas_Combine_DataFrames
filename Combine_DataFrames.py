@@ -196,7 +196,7 @@ auto_bmw.pop('Price')
 auto_audi.pop('City mpg')
 # re
 # concatenate
-auto_bmw_audi_volvo = pd.concat(list_subsets)
+auto_bmw_audi_volvo = pd.concat(list_subsets, keys = ['auto_bmw','auto_audi','auto_volvo'])
 print()
 print(auto_bmw_audi_volvo)
 
