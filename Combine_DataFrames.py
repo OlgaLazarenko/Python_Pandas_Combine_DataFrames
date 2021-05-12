@@ -191,7 +191,14 @@ print('auto_bmw_audi_volvo ')
 print(auto_bmw_audi_volvo )
 print()
 
-
+# remove some rows from <auto_bmw>  and <auto_audi> DataFrames
+auto_bmw.pop('Price')
+auto_audi.pop('City mpg')
+# re
+# concatenate
+auto_bmw_audi_volvo = pd.concat(list_subsets)
+print()
+print(auto_bmw_audi_volvo)
 
 '''
 # show the columns name
