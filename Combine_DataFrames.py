@@ -212,6 +212,12 @@ auto_append = auto_bmw.append([auto_audi, auto_volvo])
 print('auto_append')
 print(auto_append)
 print()
+
+# ignore the indexes on the concatenation axis
+auto_bmw_audi = pd.concat([auto_bmw , auto_audi] , ignore_index = True , sort = False)
+print('ignore indexes at auto_bmw_audi')
+print(auto_bmw_audi)
+print()
 '''
 # show the columns name
 for col in auto.columns:
