@@ -205,7 +205,13 @@ print(auto_bmw_audi_volvo)
 auto_bmw_audi = auto_bmw.append(auto_audi)
 print('auto_bmw_audi, appened two DataFrames')
 print(auto_bmw_audi)
+print()
 
+# append multiple DataFrames
+auto_append = auto_bmw.append([auto_audi, auto_volvo])
+print('auto_append')
+print(auto_append)
+print()
 '''
 # show the columns name
 for col in auto.columns:
