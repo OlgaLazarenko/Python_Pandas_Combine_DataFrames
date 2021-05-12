@@ -200,6 +200,12 @@ auto_bmw_audi_volvo = pd.concat(list_subsets, keys = ['auto_bmw','auto_audi','au
 print()
 print(auto_bmw_audi_volvo)
 
+
+# append <auto_bmw> and <auto_audi> DataFrames
+auto_bmw_audi = auto_bmw.append(auto_audi)
+print('auto_bmw_audi, appened two DataFrames')
+print(auto_bmw_audi)
+
 '''
 # show the columns name
 for col in auto.columns:
