@@ -228,6 +228,16 @@ print()
 auto_bmw_new = auto_bmw_audi_volvo[auto_bmw_audi_volvo['Make'] == 'bmw']
 print('auto_bmw_new')
 print(auto_bmw_new)
+print()
+
+auto_bmw_part1 = auto_bmw_new[['CarID' , 'Make' , 'Body Style' ]]
+auto_bmw_part2 = auto_bmw_new[['City mpg' , 'Highway mpg' ,'Price']]
+print(auto_bmw_part1)
+print()
+print(auto_bmw_part2)
+
+
+
 
 
 
