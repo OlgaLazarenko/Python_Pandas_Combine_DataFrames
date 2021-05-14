@@ -225,6 +225,12 @@ auto_bmw_audi_columns = pd.concat([auto_bmw,auto_audi] , axis =1 )
 print(auto_bmw_audi_columns)
 print()
 
+auto_bmw_new = auto_bmw_audi_volvo.loc(['Make'] == 'bmw')
+print('auto_bmw_new')
+print(auto_bmw_new)
+
+
+
 '''
 # show the columns name
 for col in auto.columns:
