@@ -218,6 +218,13 @@ auto_bmw_audi = pd.concat([auto_bmw , auto_audi] , ignore_index = True , sort = 
 print('ignore indexes at auto_bmw_audi')
 print(auto_bmw_audi)
 print()
+
+# concatenate DataFrames along columns
+print('concatenation along columns')
+auto_bmw_audi_columns = pd.concat([auto_bmw,auto_audi] , axis =1 )
+print(auto_bmw_audi_columns)
+print()
+
 '''
 # show the columns name
 for col in auto.columns:
