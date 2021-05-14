@@ -225,7 +225,7 @@ auto_bmw_audi_columns = pd.concat([auto_bmw,auto_audi] , axis =1 )
 print(auto_bmw_audi_columns)
 print()
 
-auto_bmw_new = auto_bmw_audi_volvo.loc(['Make'] == 'bmw')
+auto_bmw_new = auto_bmw_audi_volvo[auto_bmw_audi_volvo['Make'] == 'bmw']
 print('auto_bmw_new')
 print(auto_bmw_new)
 
