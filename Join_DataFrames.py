@@ -177,5 +177,7 @@ print()
 auto_audi_sedan = auto_audi_price[auto_audi_price['Body Style'] == 'sedan']
 print(auto_audi_sedan)
 list_to_pop = ['Make','Body Style','City mpg','Highway mpg']
-auto_audi_sedan.pop('Make')
+
+for i in list_to_pop : 
+    auto_audi_sedan.pop(i)
 print(auto_audi_sedan)
