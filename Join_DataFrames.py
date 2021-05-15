@@ -20,10 +20,9 @@ print()
 print(auto.dtypes)
 # the column <Make> is Object data type should be converted to string data type
 auto['Make'] = auto['Make'].astype(pd.StringDtype())
-print()
-print('<Make> column is converted to string data type')
-print(auto.dtypes)
-print()
+
+# convert the column  <Body Style>/(object data type) to string data type
+auto['Body Style'] = auto['Body Style'].astype(pd.StringDtype())
 
 
 # generate a list of number of a specific range(for CarID column)
@@ -175,10 +174,8 @@ print('auto_audi_price')
 print(auto_audi_price) 
 print()
 
-auto_audi_bmw = auto[ (auto['Make'] == 'audi')  &  (auto['Make'] == 'bmw') ]
-print('auto_audi_bmw')
-print(auto_audi_bmw) # returns empty DataFrame
-print()
-print(auto.head())
-print()
-
+auto_audi_sedan = auto_audi_price[auto_audi_price['Body Style'] == 'sedan']
+print(auto_audi_sedan)
+list_to_pop = ['Make','Body Style','City mpg','Highway mpg']
+auto_audi_sedan.pop('Make')
+print(auto_audi_sedan)
