@@ -152,3 +152,15 @@ print(auto_20)
 # inner join
 auto_10_20_inner_join = pd.merge(auto_10_top , auto_20 , how = 'inner' , on = 'CarID')
 print(auto_10_20_inner_join)
+print()
+
+# create DataFrame <auto_audi>
+auto_audi = auto[auto['Make'] == 'audi']
+print('auto_audi  DataFrame')
+print(auto_audi)
+print()
+
+# create DataFrame <auto_bmw>
+auto_audi_bmw = auto[auto['Make'].isin(['auto','bmw'])]
+print('auto_audi_bmw')
+print(auto_audi_bmw)
