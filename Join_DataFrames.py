@@ -161,6 +161,6 @@ print(auto_audi)
 print()
 
 # create DataFrame <auto_bmw>
-auto_audi_bmw = auto[auto['Make'] == 'audi' & auto['Make'] == 'bmw']
+auto_audi_bmw = auto[auto['Make'] == 'audi' & auto['Make'] == 'bmw'])
 print('auto_audi_bmw')
 print(auto_audi_bmw)
