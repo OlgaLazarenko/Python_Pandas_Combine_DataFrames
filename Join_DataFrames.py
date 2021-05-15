@@ -163,4 +163,11 @@ print()
 # left join of <auto_audi> and <price_df>, to get the prices of audi cars
 auto_audi_price = pd.merge(auto_audi, price_df , how = "left" , on = 'CarID')
 print('auto_audi_price')
-print(auto_audi_price)
+print(auto_audi_price) 
+print()
+
+auto_audi_bmw = auto[ (auto['Make'] == 'audi')  &  (auto['Make'] == 'bmw') ]
+print('auto_audi_bmw')
+print(auto_audi_bmw)
+print()
+print(auto.head())
