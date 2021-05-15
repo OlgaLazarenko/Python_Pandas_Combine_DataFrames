@@ -16,6 +16,15 @@ print('<auto> DataFrame')
 print(auto.head())
 print()
 
+# check the data types of the columns
+print(auto.dtypes)
+# the column <Make> is Object data type should be converted to string data type
+auto['Make'] = auto['Make'].astype(pd.StringDtype())
+print()
+print('<Make> column is converted to string data type')
+print(auto.dtypes)
+print()
+
 
 # generate a list of number of a specific range(for CarID column)
 def create_CarID_list(firstID , lastID):
@@ -171,10 +180,5 @@ print('auto_audi_bmw')
 print(auto_audi_bmw) # returns empty DataFrame
 print()
 print(auto.head())
-# check the data types of the columns
-print(auto.dtypes)
-# the column <Make> is Object data type should be converted to string data type
-auto['Make'] = auto['Make'].apply(str)
 print()
-print('<Make> column is converted to string data type')
-print(auto.dtypes)
+
