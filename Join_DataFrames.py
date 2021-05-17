@@ -168,7 +168,7 @@ print('auto_audi  DataFrame')
 print(auto_audi)
 print()
 
-# left join of <auto_audi> and <price_df>, to get the prices of audi cars
+# LEFT JOIN of <auto_audi> and <price_df>, to get the prices of audi cars
 auto_audi_price = pd.merge(auto_audi, price_df , how = "left" , on = 'CarID')
 print('auto_audi_price')
 print(auto_audi_price) 
@@ -181,3 +181,10 @@ list_to_pop = ['Make','Body Style','City mpg','Highway mpg']
 for i in list_to_pop : 
     auto_audi_sedan.pop(i)
 print(auto_audi_sedan)
+
+# INNER JOIN: auto_audi(CarID,Make,Body Style,City mpg,Highway mpg)  & auto_audi_sedan(CarID,Price)
+
+auto_audi_sedan_price = pd.merge(auto_audi , auto_audi_sedan , how = 'inner' , on = 'CarID')
+print("inner join")
+print(auto_audi_sedan_price)
+print()
