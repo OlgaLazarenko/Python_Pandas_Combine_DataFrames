@@ -8,6 +8,8 @@ import pandas as pd
 # create <auto> DataFrame by reading the data file
 auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv" , 
                   usecols = ['Make' ,
+                              'Normalized Loss',
+                              'Symboling',
                               'Body Style' , 
                               'City mpg' ,
                               'Highway mpg',  
@@ -169,9 +171,12 @@ print(auto_audi)
 print()
 
 # LEFT OUTER JOIN of <auto_audi> and <price_df>, to get the prices of audi cars, the key column CarID
-print("LEFT OUTER JOIN")
-auto_audi_price = pd.merge(auto_audi, price_df , how = "left" , on = 'CarID')
-print('auto_audi_price')
+auto_audi_price = pd.merge(auto_audi, 
+                            price_df ,
+                             how = "left" , 
+                             on = 'CarID')
+
+print(' LEFT OUTER JOIN / auto_audi_price')
 print(auto_audi_price) 
 print()
 
@@ -183,12 +188,17 @@ for i in list_to_pop :
     auto_audi_sedan.pop(i)
 print(auto_audi_sedan)
 
-
-
-
-# INNER JOIN: auto_audi(CarID,Make,Body Style,City mpg,Highway mpg)  & auto_audi_sedan(CarID,Price)
-
-auto_audi_sedan_price = pd.merge(auto_audi , auto_audi_sedan , how = 'inner' , on = 'CarID')
-print("inner join")
-print(auto_audi_sedan_price)
 print()
+
+
+
+
+# INNER JOIN: <auto> and <auto_audi> DataFrames, the key column <CarID>
+# get the data for all autos except audi 
+auto_except_audi = pd.merge(auto,
+                            auto_audi,
+                            on = 'CarID' , 
+                            how = 'left')
+print("All cars except Audi")
+print(auto_except_audi)
+
