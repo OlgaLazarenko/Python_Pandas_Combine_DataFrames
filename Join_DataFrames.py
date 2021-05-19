@@ -195,10 +195,10 @@ print()
 
 # INNER JOIN: <auto> and <auto_audi> DataFrames, the key column <CarID>
 # get the data for all autos except audi 
-auto_except_audi = pd.merge(auto,
-                            auto_audi,
-                            on = 'CarID' , 
-                            how = 'left')
-print("All cars except Audi")
-print(auto_except_audi)
+auto_audi_part= auto_audi[auto['CarID' ,
+                            'Make' , 
+                            'Body Style']
+                        ]
+
+print(auto_audi_part)
 
