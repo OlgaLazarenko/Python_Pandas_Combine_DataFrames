@@ -217,8 +217,9 @@ print("audi_extra")
 print(audi_extra)
 print()
 # append two dataframes
-auto_audi_extra = auto_audi.append(audi_extra )
+auto_audi_extra = auto_audi.append(audi_extra , ignore_index = True )
 print()
 print("auto_audi_extra")
 print(auto_audi_extra)
 
+# INNER JOIN : auto_audi_extra  and price_df
