@@ -206,7 +206,7 @@ print(auto_audi_part)
 print('auto_audi')
 print(auto_audi)
 print()
-
+# create DataFrame
 audi_extra = pd.DataFrame(
                             {"CarID" : ["AAA" , "BBB" , "CCC" , "DDD"]  , 
                             "Make" : ["audi" , "audi" , "audi" , "audi"] , 
@@ -215,3 +215,10 @@ audi_extra = pd.DataFrame(
                         )
 print("audi_extra")
 print(audi_extra)
+print()
+# append two dataframes
+auto_audi_extra = auto_audi.append(audi_extra )
+print()
+print("auto_audi_extra")
+print(auto_audi_extra)
+
