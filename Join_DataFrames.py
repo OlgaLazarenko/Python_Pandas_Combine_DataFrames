@@ -223,8 +223,8 @@ print("auto_audi_extra")
 print(auto_audi_extra)
 print()
 
-# INNER JOIN : auto_audi_extra  and price_df
-audi_result = pd.merge( auto_audi_extra ,
+# INNER JOIN : auto_audi_extra  and price_df, obtain only selected columns
+audi_result = pd.merge( auto_audi_extra[['CarID' , 'Make' , 'Body Style' ]] ,
                              price_df , 
                              how = 'inner' , 
                              on = 'CarID'
