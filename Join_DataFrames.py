@@ -243,7 +243,7 @@ seven_max_price = price_df.nlargest(7, ['Price'])
 print(seven_max_price)
 
 auto_seven_max_price = pd.merge( auto[["CarID" , "Make" , "Body Style" ,
-                                         "Normalized Loss" ,"City mpg" , "Highway mpg"]] , 
+                                         "City mpg" , "Highway mpg"]] , 
                                 seven_max_price , 
                                 on = "CarID" , 
                                 how = 'right')
