@@ -192,7 +192,7 @@ print()
 
 
 
-
+'''
 # INNER JOIN: <auto> and <auto_audi> DataFrames, the key column <CarID>
 # get the data for all autos except audi 
 auto_audi_part= auto_audi[auto['CarID' ,
@@ -201,4 +201,17 @@ auto_audi_part= auto_audi[auto['CarID' ,
                         ]
 
 print(auto_audi_part)
+'''
 
+print('auto_audi')
+print(auto_audi)
+print()
+
+audi_extra = pd.DataFrame(
+                            {"CarID" : ["AAA" , "BBB" , "CCC" , "DDD"]  , 
+                            "Make" : ["audi" , "audi" , "audi" , "audi"] , 
+                            "Body Style" : ["Couple", "Convertable" , "Crossover" , "Crossover"]
+                            }
+                        )
+print("audi_extra")
+print(audi_extra)
