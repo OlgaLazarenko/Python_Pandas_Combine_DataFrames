@@ -221,5 +221,14 @@ auto_audi_extra = auto_audi.append(audi_extra , ignore_index = True )
 print()
 print("auto_audi_extra")
 print(auto_audi_extra)
+print()
 
 # INNER JOIN : auto_audi_extra  and price_df
+audi_result = pd.merge( auto_audi_extra ,
+                             price_df , 
+                             how = 'inner' , 
+                             on = 'CarID'
+                             )
+print()
+print("audi_result")
+print(audi_result)
