@@ -224,7 +224,7 @@ print(auto_audi_extra)
 print()
 
 # INNER JOIN : auto_audi_extra  and price_df, obtain only selected columns
-audi_result = pd.merge( auto_audi_extra[['CarID' , 'Make' , 'Body Style' ]] ,
+audi_result = pd.merge( auto_audi_extra[['CarID' , 'Make' , 'Body Style'  ]] ,
                              price_df , 
                              how = 'inner' , 
                              on = 'CarID'
@@ -234,11 +234,22 @@ print("audi_result")
 print(audi_result)
 print()
 
-# RIGHT JOIN 
+# RIGHT JOIN, get the information about seven the most expensive imported cars, <auto> and <price_df> dataframes
 # Select 7 top prices of the imported cars , <price_df> dataframe
 print(price_df.dtypes) # check if the column "Price" has integer values
 print()
 print("7 biggest prices of the imported cars")
 seven_max_price = price_df.nlargest(7, ['Price'])
 print(seven_max_price)
+
+auto_seven_max_price = pd.merge( auto[["CarID" , "Make" , "Body Style" ,
+                                         "Normalized Loss" ,"City mpg" , "Highway mpg"]] , 
+                                seven_max_price , 
+                                on = "CarID" , 
+                                how = 'right')
+
+print()
+print("information about seven the most expensive imported cars")
+print(auto_seven_max_price)
+
 
