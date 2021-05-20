@@ -233,3 +233,12 @@ print()
 print("audi_result")
 print(audi_result)
 print()
+
+# RIGHT JOIN 
+# Select 7 top prices of the imported cars , <price_df> dataframe
+print(price_df.dtypes) # check if the column "Price" has integer values
+print()
+print("7 biggest prices of the imported cars")
+seven_max_price = price_df.nlargest(7, ['Price'])
+print(seven_max_price)
+
