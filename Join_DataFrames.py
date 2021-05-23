@@ -259,7 +259,11 @@ print('auto_honda_hatchback')
 print(auto_honda_hb_1)
 
 # drop some columns
-auto_honda_hb_1.drop(columns = ['Symboling' , 'Normalized Loss' , 'City mpg' , 'Highway mpg'] , axis = 1)
+del auto_honda_hb_1['Symboling']
+del auto_honda_hb_1['Normalized Loss']
+del auto_honda_hb_1['City mpg']
+del auto_honda_hb_1['Highway mpg']
+
 print()
 print('Columns are dropped')
 print(auto_honda_hb_1)
