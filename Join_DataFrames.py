@@ -252,4 +252,8 @@ print()
 print("information about seven the most expensive imported cars")
 print(auto_seven_max_price)
 
-
+# OUTER JOIN
+# create a subset of the data
+auto_honda = auto.loc[auto["Make"] == 'honda']
+print('auto_honda')
+print(auto_honda)
