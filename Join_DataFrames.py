@@ -254,6 +254,12 @@ print(auto_seven_max_price)
 
 # OUTER JOIN
 # create a subset of the data
-auto_honda_hatchback = auto.loc[ (auto["Make"] == 'honda') & (auto['Body Style'] == 'hatchback') & (auto['City mpg'] >= 30 )]
+auto_honda_hb_1 = auto.loc[ (auto["Make"] == 'honda') & (auto['Body Style'] == 'hatchback') & (auto['City mpg'] >= 30 )]
 print('auto_honda_hatchback')
-print(auto_honda_hatchback)
+print(auto_honda_hb_1)
+
+# drop some columns
+auto_honda_hb_1.drop(columns = ['Symboling' , 'Normalized Loss' , 'City mpg' , 'Highway mpg'] , axis = 1)
+print()
+print('Columns are dropped')
+print(auto_honda_hb_1)
