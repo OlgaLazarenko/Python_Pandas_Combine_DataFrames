@@ -5,6 +5,6 @@
 - [] Create the following joins:
     - [x] Left joins
     - [x] Inner joins
-    - [] Right joins
-    - [] Outer joins
+    - [x] Right joins
+    - [x] Outer joins
 
