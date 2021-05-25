@@ -223,6 +223,8 @@ print("auto_audi_extra")
 print(auto_audi_extra)
 print()
 
+
+#-------------------------------------------------------------------------------
 # INNER JOIN : auto_audi_extra  and price_df, obtain only selected columns
 audi_result = pd.merge( auto_audi_extra[['CarID' , 'Make' , 'Body Style'  ]] ,
                              price_df , 
@@ -234,6 +236,8 @@ print("audi_result")
 print(audi_result)
 print()
 
+
+# ------------------------------------------------------------------------------------
 # RIGHT JOIN, get the information about seven the most expensive imported cars, <auto> and <price_df> dataframes
 # Select 7 top prices of the imported cars , <price_df> dataframe
 print(price_df.dtypes) # check if the column "Price" has integer values
@@ -252,30 +256,42 @@ print()
 print("information about seven the most expensive imported cars")
 print(auto_seven_max_price)
 
+
+
+# -----------------------------------------------------------------------------------------
 # OUTER JOIN
 # create a subset of the data
-auto_honda_hb_1= auto.loc[ (auto["Make"] == 'honda') & (auto['Body Style'] == 'hatchback') & (auto['City mpg'] >= 30 )]
+auto_honda_hb= auto.loc[ (auto["Make"] == 'honda') & (auto['Body Style'] == 'hatchback') & (auto['City mpg'] >= 30 )]
 print('auto_honda_hatchback')
-print(auto_honda_hb_1)
+print(auto_honda_hb)
 
 # drop some columns
-del auto_honda_hb_1['Symboling']
-del auto_honda_hb_1['Normalized Loss']
-del auto_honda_hb_1['City mpg']
-del auto_honda_hb_1['Highway mpg']
+del auto_honda_hb['Symboling']
+del auto_honda_hb['Normalized Loss']
+del auto_honda_hb['City mpg']
+del auto_honda_hb['Highway mpg']
 
 print()
 print('Columns are dropped')
-print(auto_honda_hb_1)
+print(auto_honda_hb)
 
-# create a dataframe with extra information about honda auto
+# create a dataframe with extra information about honda auto, the left dataframe for outer join
 auto_honda_extra = pd.DataFrame({ "CarID":["AAA", "BBB", "CCC"] ,
                             "Make" :["Honda", "Honda", "Honda"] ,
                             "Body Style" :["couple", "couple", "convertible"]
                         })
 # add new rows to <auto_honda_hb_1>
 print()
-auto_honda_hb_left = pd.concat([auto_honda_hb_1 , auto_honda_extra])
+auto_honda_hb_left = pd.concat([auto_honda_hb , auto_honda_extra])
 print(auto_honda_hb_left)
 
-# create a dataframe <auto_honda_
+# create a dataframe, the right dataframe for outer join
+print()
+print()
+auto_honda = auto.loc[auto["Make"] == 'honda']
+print(auto_honda)
+# sort dataframe by the column <Make> asc 
+auto_honda.sort_values( by = "Body Style", inplace = True )
+print()
+print()
+print(auto_honda)
