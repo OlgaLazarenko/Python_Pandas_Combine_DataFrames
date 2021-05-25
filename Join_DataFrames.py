@@ -254,7 +254,7 @@ print(auto_seven_max_price)
 
 # OUTER JOIN
 # create a subset of the data
-auto_honda_hb_1 = auto.loc[ (auto["Make"] == 'honda') & (auto['Body Style'] == 'hatchback') & (auto['City mpg'] >= 30 )]
+auto_honda_hb_1= auto.loc[ (auto["Make"] == 'honda') & (auto['Body Style'] == 'hatchback') & (auto['City mpg'] >= 30 )]
 print('auto_honda_hatchback')
 print(auto_honda_hb_1)
 
@@ -267,3 +267,11 @@ del auto_honda_hb_1['Highway mpg']
 print()
 print('Columns are dropped')
 print(auto_honda_hb_1)
+
+# create a dataframe with extra information about honda auto
+honda_honda_extr = pd.DataFrame({ "CarID":["AAA", "BBB", "CCC"] ,
+                            "Make" :["Honda", "Honda", "Honda"] ,
+                            "Body Style" :["couple", "couple", "convertible"]
+                        })
+# add new rows to <auto_honda_hb_1>
+auto_honda_hb_extra = pd.concat([auto_honda_hb_1 , auto_honda_extra])
