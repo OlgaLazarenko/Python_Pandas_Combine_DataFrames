@@ -269,9 +269,13 @@ print('Columns are dropped')
 print(auto_honda_hb_1)
 
 # create a dataframe with extra information about honda auto
-honda_honda_extr = pd.DataFrame({ "CarID":["AAA", "BBB", "CCC"] ,
+auto_honda_extra = pd.DataFrame({ "CarID":["AAA", "BBB", "CCC"] ,
                             "Make" :["Honda", "Honda", "Honda"] ,
                             "Body Style" :["couple", "couple", "convertible"]
                         })
 # add new rows to <auto_honda_hb_1>
-auto_honda_hb_extra = pd.concat([auto_honda_hb_1 , auto_honda_extra])
+print()
+auto_honda_hb_left = pd.concat([auto_honda_hb_1 , auto_honda_extra])
+print(auto_honda_hb_left)
+
+# create a dataframe <auto_honda_
