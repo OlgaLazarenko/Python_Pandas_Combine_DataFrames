@@ -293,5 +293,13 @@ print(auto_honda)
 # sort dataframe by the column <Make> asc 
 auto_honda.sort_values( by = "Body Style", inplace = True )
 print()
-print()
+print("sorted DataFrame")
 print(auto_honda)
+# outer join of the dataframes <auto_honda_hb_left>/left dataframe and <auto_honda>/right dataframe
+auto_honda_outerJoin = auto_honda_hb_left.merge(auto_honda , 
+                                                on = "CarID" , 
+                                                how = "outer"
+                                                )
+print("Outer join result")
+print(auto_honda_outerJoin)
+
